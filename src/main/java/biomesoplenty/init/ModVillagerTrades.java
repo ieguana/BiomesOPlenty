@@ -31,6 +31,7 @@ public class ModVillagerTrades
             new ItemsForEmeralds(BOPBlocks.ORANGE_AUTUMN_SAPLING.get(), 5, 1, 8, 1),
             new ItemsForEmeralds(BOPBlocks.MAPLE_SAPLING.get(), 5, 1, 8, 1),
             new ItemsForEmeralds(BOPBlocks.FIR_SAPLING.get(), 5, 1, 8, 1),
+            new ItemsForEmeralds(BOPBlocks.PINE_SAPLING.get(), 5, 1, 8, 1),
             new ItemsForEmeralds(BOPBlocks.REDWOOD_SAPLING.get(), 5, 1, 8, 1),
             new ItemsForEmeralds(BOPBlocks.MAHOGANY_SAPLING.get(), 5, 1, 8, 1),
             new ItemsForEmeralds(BOPBlocks.JACARANDA_SAPLING.get(), 5, 1, 8, 1),
@@ -72,7 +73,8 @@ public class ModVillagerTrades
             new ItemsForEmeralds(BOPBlocks.WHITE_SAND.get(), 1, 4, 6, 1),
             new ItemsForEmeralds(BOPBlocks.ORANGE_SAND.get(), 1, 4, 6, 1),
             new ItemsForEmeralds(BOPBlocks.BLACK_SAND.get(), 1, 4, 6, 1),
-            new ItemsForEmeralds(BOPBlocks.DRIED_SALT.get(), 1, 6, 8, 1)
+            new ItemsForEmeralds(BOPBlocks.DRIED_SALT.get(), 1, 6, 8, 1),
+            new ItemsForEmeralds(BOPBlocks.THERMAL_CALCITE.get(), 1, 6, 8, 1)
         };
 
         VillagerTrades.ItemListing[] WANDERING_TRADER_RARE = new VillagerTrades.ItemListing[]{

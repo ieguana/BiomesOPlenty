@@ -276,6 +276,7 @@ public class BOPOverworldBiomes
         BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
         BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
         BiomeDefaultFeatures.addInfestedStone(biomeBuilder);
+        addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPMiscOverworldPlacements.CRAG_MOSS);
         addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPMiscOverworldPlacements.CRAG_SPLATTER);
         addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPVegetationPlacements.PATCH_GRASS_12);
         addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPVegetationPlacements.PATCH_TALL_GRASS_24);
@@ -498,6 +499,8 @@ public class BOPOverworldBiomes
     {
         // Mob spawns
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.farmAnimals(spawnBuilder);
 
         // Biome features
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatureGetter, carverGetter);
@@ -537,12 +540,42 @@ public class BOPOverworldBiomes
         return biome(true, 0.6F, 0.6F, spawnBuilder, biomeBuilder, MOUNTAIN_MUSIC);
     }
 
+    public static Biome hotSprings(HolderGetter<PlacedFeature> placedFeatureGetter, HolderGetter<ConfiguredWorldCarver<?>> carverGetter)
+    {
+        // Mob spawns
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FOX, 8, 2, 4));
+
+        // Biome features
+        BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatureGetter, carverGetter);
+        globalOverworldGeneration(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
+
+        addFeature(biomeBuilder, GenerationStep.Decoration.UNDERGROUND_DECORATION, BOPMiscOverworldPlacements.DISK_HOT_SPRING_GRAVEL);
+        addFeature(biomeBuilder, GenerationStep.Decoration.UNDERGROUND_DECORATION, BOPMiscOverworldPlacements.DISK_HOT_SPRING_CALCITE);
+        addFeature(biomeBuilder, GenerationStep.Decoration.UNDERGROUND_DECORATION, BOPMiscOverworldPlacements.DISK_HOT_SPRING_BASALT);
+        addFeature(biomeBuilder, GenerationStep.Decoration.UNDERGROUND_DECORATION, BOPMiscOverworldPlacements.DISK_HOT_SPRING_PACKED_MUD);
+        addFeature(biomeBuilder, GenerationStep.Decoration.UNDERGROUND_DECORATION, BOPMiscOverworldPlacements.DISK_HOT_SPRING_THERMAL_CALCITE);
+
+        addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPVegetationPlacements.TREES_HOT_SPRINGS);
+        addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPVegetationPlacements.SHORT_BAMBOO);
+        addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPVegetationPlacements.PATCH_BUSH_1);
+        addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPVegetationPlacements.PATCH_FERN_2);
+        addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPVegetationPlacements.PATCH_LARGE_FERN_NORMAL);
+        addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPVegetationPlacements.PATCH_GRASS_6);
+        addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, BOPVegetationPlacements.HOT_SPRING_VENTS);
+
+        return biomeWithColorOverrides(true, 0.17F, 0.5F, 4445678, 270131, 0x80B497, 0x60A17B, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+    }
+
     public static Biome jadeCliffs(HolderGetter<PlacedFeature> placedFeatureGetter, HolderGetter<ConfiguredWorldCarver<?>> carverGetter)
     {
         // Mob spawns
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PANDA, 1, 1, 2));
 
         // Biome features
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatureGetter, carverGetter);

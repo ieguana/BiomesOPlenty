@@ -45,6 +45,8 @@ public class BOPBlocks
     public static RegistryObject<Block> BLACK_SANDSTONE_WALL;
 
     public static RegistryObject<Block> DRIED_SALT;
+    public static RegistryObject<Block> THERMAL_CALCITE;
+    public static RegistryObject<Block> THERMAL_CALCITE_VENT;
 
     public static RegistryObject<Block> FLESH;
     public static RegistryObject<Block> POROUS_FLESH;
@@ -122,6 +124,25 @@ public class BOPBlocks
     public static RegistryObject<Block> FIR_WALL_SIGN;
     public static RegistryObject<Block> FIR_HANGING_SIGN;
     public static RegistryObject<Block> FIR_WALL_HANGING_SIGN;
+    public static RegistryObject<Block> PINE_SAPLING;
+    public static RegistryObject<Block> PINE_LEAVES;
+    public static RegistryObject<Block> PINE_LOG;
+    public static RegistryObject<Block> STRIPPED_PINE_LOG;
+    public static RegistryObject<Block> PINE_WOOD;
+    public static RegistryObject<Block> STRIPPED_PINE_WOOD;
+    public static RegistryObject<Block> PINE_PLANKS;
+    public static RegistryObject<Block> PINE_SLAB;
+    public static RegistryObject<Block> PINE_STAIRS;
+    public static RegistryObject<Block> PINE_FENCE;
+    public static RegistryObject<Block> PINE_FENCE_GATE;
+    public static RegistryObject<Block> PINE_DOOR;
+    public static RegistryObject<Block> PINE_TRAPDOOR;
+    public static RegistryObject<Block> PINE_PRESSURE_PLATE;
+    public static RegistryObject<Block> PINE_BUTTON;
+    public static RegistryObject<Block> PINE_SIGN;
+    public static RegistryObject<Block> PINE_WALL_SIGN;
+    public static RegistryObject<Block> PINE_HANGING_SIGN;
+    public static RegistryObject<Block> PINE_WALL_HANGING_SIGN;
     public static RegistryObject<Block> REDWOOD_SAPLING;
     public static RegistryObject<Block> REDWOOD_LEAVES;
     public static RegistryObject<Block> REDWOOD_LOG;
@@ -346,6 +367,7 @@ public class BOPBlocks
     public static RegistryObject<Block> POTTED_ORANGE_AUTUMN_SAPLING;
     public static RegistryObject<Block> POTTED_MAPLE_SAPLING;
     public static RegistryObject<Block> POTTED_FIR_SAPLING;
+    public static RegistryObject<Block> POTTED_PINE_SAPLING;
     public static RegistryObject<Block> POTTED_REDWOOD_SAPLING;
     public static RegistryObject<Block> POTTED_MAHOGANY_SAPLING;
     public static RegistryObject<Block> POTTED_JACARANDA_SAPLING;

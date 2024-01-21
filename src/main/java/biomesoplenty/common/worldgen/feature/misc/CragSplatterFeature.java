@@ -53,7 +53,7 @@ public class CragSplatterFeature extends Feature<NoneFeatureConfiguration>
 
                         if ((blockstate.getBlock() == Blocks.STONE || blockstate.getBlock() == Blocks.GRAVEL || blockstate.getBlock() == Blocks.ANDESITE || blockstate.getBlock() == Blocks.DIORITE || blockstate.getBlock() == Blocks.GRANITE || blockstate.getBlock() == Blocks.DIRT))
                         {
-                            switch (rand.nextInt(14))
+                            switch (rand.nextInt(5))
                             {
                                 default:
                                 case 0:
@@ -63,30 +63,11 @@ public class CragSplatterFeature extends Feature<NoneFeatureConfiguration>
 
                                 case 2:
                                 case 3:
-                                case 4:
-                                case 5:
-                                case 6:
                                     worldIn.setBlock(mutable, Blocks.GRAVEL.defaultBlockState(), 2);
                                     break;
 
-                                case 7:
-                                case 8:
-                                    worldIn.setBlock(mutable, Blocks.MOSSY_COBBLESTONE.defaultBlockState(), 2);
-                                    break;
-
-                                case 9:
-                                case 10:
+                                case 4:
                                     worldIn.setBlock(mutable, Blocks.ANDESITE.defaultBlockState(), 2);
-                                    break;
-
-                                case 11:
-                                case 12:
-                                case 13:
-                                    if (worldIn.isStateAtPosition(mutable.move(Direction.UP), BlockBehaviour.BlockStateBase::isAir))
-                                    {
-                                        worldIn.setBlock(mutable, Blocks.GRASS.defaultBlockState(), 2);
-                                        worldIn.setBlock(mutable.move(Direction.DOWN), Blocks.GRASS_BLOCK.defaultBlockState(), 2);
-                                    }
                                     break;
                             }
 

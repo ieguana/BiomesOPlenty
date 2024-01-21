@@ -25,6 +25,7 @@ public class BOPBaseFeatures
     public static final BOPTreeFeature<BigTreeConfiguration> BIG_TREE = register("big_tree", new BigTreeFeature(BigTreeConfiguration.CODEC));
     public static final Feature<NoneFeatureConfiguration> BRAMBLE = register("bramble", new BrambleFeature(NoneFeatureConfiguration.CODEC));
     public static final Feature<NoneFeatureConfiguration> CORNER_COBWEBS = register("corner_cobwebs", new CornerCobwebFeature(NoneFeatureConfiguration.CODEC));
+    public static final Feature<NoneFeatureConfiguration> CRAG_MOSS = register("crag_moss", new CragMossFeature(NoneFeatureConfiguration.CODEC));
     public static final Feature<NoneFeatureConfiguration> CRAG_SPLATTER = register("crag_splatter", new CragSplatterFeature(NoneFeatureConfiguration.CODEC));
     public static final BOPTreeFeature<CypressTreeConfiguration> CYPRESS_TREE = register("cypress_tree", new CypressTreeFeature(CypressTreeConfiguration.CODEC));
     public static final Feature<NoneFeatureConfiguration> DRIPSTONE_SPLATTER = register("dripstone_splatter", new DripstoneSplatterFeature(NoneFeatureConfiguration.CODEC));
@@ -34,6 +35,7 @@ public class BOPBaseFeatures
     public static final Feature<NoneFeatureConfiguration> FALLEN_FIR_LOG = register("fallen_fir_log", new FallenFirLogFeature(NoneFeatureConfiguration.CODEC));
     public static final Feature<NoneFeatureConfiguration> FLESH_TENDON = register("flesh_tendon", new FleshTendonFeature(NoneFeatureConfiguration.CODEC));
     public static final Feature<NoneFeatureConfiguration> GIANT_GLOWSHROOM = register("giant_glowshroom", new GiantGlowshroomFeature(NoneFeatureConfiguration.CODEC));
+    public static final Feature<NoneFeatureConfiguration> HOT_SPRING_VENTS = register("hot_spring_vents", new HotSpringVentFeature(NoneFeatureConfiguration.CODEC));
     public static final Feature<NoneFeatureConfiguration> MOSSY_BLACK_SAND_SPLATTER = register("mossy_black_sand_splatter", new GrassSplatterFeature(NoneFeatureConfiguration.CODEC));
     public static final Feature<NoneFeatureConfiguration> HANGING_FLESH_TENDON = register("hanging_flesh_tendon", new HangingFleshTendonFeature(NoneFeatureConfiguration.CODEC));
     public static final Feature<NoneFeatureConfiguration> HUGE_TOADSTOOL = register("huge_toadstool", new HugeToadstoolFeature(NoneFeatureConfiguration.CODEC));
